@@ -3,7 +3,7 @@ module.exports = {
         extend: {
             colors: {
                 'accent': {
-
+                    'primary': '#f5690f'
                 },
                 'primary': {
                     'primary': '#FFFFFF',

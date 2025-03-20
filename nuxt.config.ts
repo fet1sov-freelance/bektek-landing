@@ -5,5 +5,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-svgo-loader'
-  ]
+  ],
+  components: {
+    global: true,
+    dirs: ['~/components']
+  },
 })
