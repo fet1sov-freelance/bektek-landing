@@ -13,5 +13,9 @@
 
     "buttons": {
         "leaveblank": "Leave a blank"
+    },
+
+    "footer": {
+        "message": "Design, development, and launch of business products"
     }
 }

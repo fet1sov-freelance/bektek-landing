@@ -9,7 +9,7 @@ import SocialLinks from '~/components/sociallnks/SocialLinks.vue';
 </script>
 
 <template>
-  <div >
+  <div>
     <Header :items="HeaderItems"/>
 
     <ul class="flex flex-col items-center justify-center bg-secondary-primary h-full">
@@ -34,5 +34,7 @@ import SocialLinks from '~/components/sociallnks/SocialLinks.vue';
         
       </li>
     </ul>
+
+    <Footer />
   </div>
 </template>

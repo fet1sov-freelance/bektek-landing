@@ -10,6 +10,7 @@ module.exports = {
                 },
                 'secondary': {
                     'primary': '#1B1B1B',
+                    'secondary': '#909090'
                 }
             },
             
