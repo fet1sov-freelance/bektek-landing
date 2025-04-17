@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import LogoIcon from '~/assets/logo.svg';
+import ArrowRight from '~/assets/arrow-right.svg';
 
 import { SocialLinkItems } from '~/content/sociallinks/SocialLinks';
 import SocialLinks from '~/components/sociallnks/SocialLinks.vue';
@@ -22,11 +23,14 @@ import SocialLinks from '~/components/sociallnks/SocialLinks.vue';
         <SocialLinks :items="SocialLinkItems" />
       </div>
 
-      <div class="max-w-[570px]">
+      <div class="max-w-[570px] flex flex-col justify-between">
         <p class="text-primary-primary text-[32px]">{{ $t("footer.message") }}</p>
-        
-        
-        <input placeholder="E-mail">
+
+        <div class="flex flex-row items-center border-primary-primary border-b-[2px]">
+          <input class="bg-[transparent] text-primary-primary placeholder-primary-primary focus:outline-none w-full"
+            placeholder="E-mail">
+          <ArrowRight />
+        </div>
       </div>
     </div>
   </div>
