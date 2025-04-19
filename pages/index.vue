@@ -6,6 +6,11 @@ import WebStudioLogo from '~/assets/web-studio.svg';
 
 import RouterButton from '~/components/button/RouterButton.vue';
 import SocialLinks from '~/components/sociallnks/SocialLinks.vue';
+
+function sendApplication()
+{
+
+}
 </script>
 
 <template>
@@ -30,8 +35,19 @@ import SocialLinks from '~/components/sociallnks/SocialLinks.vue';
         </div>
       </li>
 
-      <li class="w-full">
-        
+      <li class="w-full flex justify-center h-full bg-secondary-light">
+        <div class="w-full my-[90px] max-w-[1200px] flex justify-between">
+          <div>
+            <form @onSubmit="sendApplication">
+              <h2 class="text-primary-primary text-[64px] font-bold">{{ $t("application.title") }}</h2>
+              <p class="text-primary-gray text-[24px]">{{ $t("application.subtitle") }}</p>
+            </form>
+          </div>
+          
+          <div>
+            <img src="photos/photo_1.png">
+          </div>
+        </div>
       </li>
     </ul>
 

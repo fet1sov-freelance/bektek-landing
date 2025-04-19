@@ -15,6 +15,11 @@
         "leaveblank": "Leave a blank"
     },
 
+    "application": {
+        "title": "Have any ideas?",
+        "subtitle": "Share with us!"
+    },
+    
     "footer": {
         "message": "Design, development, and launch of business products"
     }
