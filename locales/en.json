@@ -12,12 +12,24 @@
     },
 
     "buttons": {
-        "leaveblank": "Leave a blank"
+        "leaveblank": "Leave a blank",
+        "send": "Send a application"
     },
 
     "application": {
         "title": "Have any ideas?",
-        "subtitle": "Share with us!"
+        "subtitle": "Share with us!",
+        "inputs": {
+            "fio": "Name and surname",
+            "email": "Email",
+            "phone": "Phone number"
+        },
+        "types": {
+            "title": "Type of project",
+            "other": "Another"
+        },
+        "confirmation": "I'm agree with ",
+        "personaldata": "Personal data proceeding"
     },
     
     "footer": {

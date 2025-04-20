@@ -12,12 +12,24 @@
     },
 
     "buttons": {
-        "leaveblank": "Оставить заявку"
+        "leaveblank": "Оставить заявку",
+        "send": "Отправить"
     },
 
     "application": {
         "title": "Есть идеи?",
-        "subtitle": "Поделитесь с нами!"
+        "subtitle": "Поделитесь с нами!",
+        "inputs": {
+            "fio": "Имя и фамилия",
+            "email": "Email",
+            "phone": "Номер телефона"
+        },
+        "types": {
+            "title": "Тип проекта",
+            "other": "Another"
+        },
+        "confirmation": "Я согласен на обработку ",
+        "personaldata": "Персональных данных"
     },
 
     "footer": {
