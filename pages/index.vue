@@ -103,7 +103,7 @@ function sendApplication()
                       Design
                   </label>
 
-                  <label class="text-secondary-secondary flex flex-row items-center pointer-none cursor-pointer uppercase" for="desktop">
+                  <label class="text-secondary-secondary flex flex-row items-center pointer-none cursor-pointer uppercase" for="other">
                     <input 
                       type="radio"
                       class="w-[16px] h-[16px] cursor-pointer appearance-none rounded-full border border-secondary-secondary checked:border-secondary-secondary checked:bg-secondary-secondary transition-all"
@@ -117,19 +117,29 @@ function sendApplication()
               </div>
 
               <input 
-              class="w-full py-[15px] border-accent-primary border-2 text-primary-primary text-[600]"
+              class="w-full py-[15px] border-accent-primary border-2 text-primary-primary text-[600] transition-all "
               type="submit" 
               :value="$t('buttons.send')">
 
               <div class="flex flex-row">
-                <input
-                  type="checkbox"
-                  name="confirm"
-                  >
+                <label class="flex flex-row mt-[10px] items-center relative">
+                  <input
+                    type="checkbox"
+                    class="peer w-[20px] h-[20px] border-secondary-secondary border appearance-none"
+                    name="confirm"
+                    >
 
-                <label 
-                  class="text-secondary-secondary my-[5px] ml-[10px] flex items-center w-full text-[16px]" 
-                  for="confirm">{{ $t("application.confirmation") }}&nbsp;<p class="underline">{{ $t("application.personaldata") }}</p></label>
+                    <span class="absolute w-[18px] h-[24px] text-white opacity-0 peer-checked:opacity-100 left-[0] pointer-events-none">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-[24px] w-[18px]" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                    </span>
+
+                  <label 
+                    class="text-secondary-secondary my-[5px] ml-[10px] flex items-center w-full text-[16px]" 
+                    for="confirm">{{ $t("application.confirmation") }}&nbsp;<p class="underline">{{ $t("application.personaldata") }}</p></label>
+                </label>
+                
               </div>
 
             </form>
