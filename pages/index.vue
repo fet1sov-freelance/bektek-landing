@@ -37,34 +37,82 @@ function sendApplication()
 
       <li class="w-full flex justify-center h-full bg-secondary-light">
         <div class="w-full my-[90px] max-w-[1200px] flex justify-between">
+
+        </div>
+      </li>
+
+      <li class="w-full flex justify-center h-full bg-secondary-primary">
+        <div class="w-full my-[90px] max-w-[1200px] flex justify-between">
+
+        </div>
+      </li>
+
+      <li class="w-full flex justify-center h-full bg-secondary-light">
+        <div class="w-full my-[90px] max-w-[1200px] flex justify-between">
           <div>
             <form @onSubmit="sendApplication">
               <h2 class="text-primary-primary text-[64px] font-bold">{{ $t("application.title") }}</h2>
               <p class="text-primary-gray text-[24px]">{{ $t("application.subtitle") }}</p>
 
               <input 
-              class="bg-transparent w-full py-[10px] text-[12px] my-[20px] border-b-4 border-secondary-secondary focus:outline-none placeholder:text-secondary-secondary text-primary-primary uppercase font-bold" 
+              class="bg-transparent w-full py-[10px] text-[12px] my-[20px] border-b-2 border-secondary-secondary focus:outline-none placeholder:text-secondary-secondary text-primary-primary uppercase font-bold" 
               :placeholder="$t('application.inputs.fio')">
 
               <input 
-              class="bg-transparent w-full py-[10px] text-[12px] my-[20px] border-b-4 border-secondary-secondary focus:outline-none placeholder:text-secondary-secondary text-primary-primary uppercase font-bold" 
+              class="bg-transparent w-full py-[10px] text-[12px] my-[20px] border-b-2 border-secondary-secondary focus:outline-none placeholder:text-secondary-secondary text-primary-primary uppercase font-bold" 
               :placeholder="$t('application.inputs.email')">
 
               <input 
-              class="bg-transparent w-full py-[10px] text-[12px] my-[20px] border-b-4 border-secondary-secondary focus:outline-none placeholder:text-secondary-secondary text-primary-primary uppercase font-bold" 
+              class="bg-transparent w-full py-[10px] text-[12px] my-[20px] border-b-2 border-secondary-secondary focus:outline-none placeholder:text-secondary-secondary text-primary-primary uppercase font-bold" 
               :placeholder="$t('application.inputs.phone')">
 
-
-              <div class="flex my-[15px] flex-row justify-between items-center">
+              <div class="flex my-[40px] flex-row justify-between items-center">
                 <p class="uppercase font-bold text-[12px] text-secondary-dark">{{ $t('application.types.title') }}</p>
 
                 <div class="flex flex-row">
-                  <input 
-                    type="radio"
-                    class="h-6 w-6 checked:bg-green-500 text-green-500 p-3 my-4"
-                    name="web"
-                    >
-                  <label class="text-secondary-secondary ml-[10px] flex items-center w-full text-[12px] font-bold" for="web">WEB</label>
+                  <label class="text-secondary-secondary flex flex-row items-center pointer-none cursor-pointer uppercase mr-[20px]" for="web">
+                    <input 
+                      type="radio"
+                      class="w-[16px] h-[16px] cursor-pointer appearance-none rounded-full border border-secondary-secondary checked:border-secondary-secondary checked:bg-secondary-secondary transition-all"
+                      id="web"
+                      name="type"
+                      checked>
+                      &nbsp;
+                      Web
+                  </label>
+
+                  <label class="text-secondary-secondary flex flex-row items-center pointer-none cursor-pointer uppercase mr-[20px]" for="desktop">
+                    <input 
+                      type="radio"
+                      class="w-[16px] h-[16px] cursor-pointer appearance-none rounded-full border border-secondary-secondary checked:border-secondary-secondary checked:bg-secondary-secondary transition-all"
+                      id="desktop"
+                      name="type"
+                      >
+                      &nbsp;
+                      Desktop
+                  </label>
+
+                  <label class="text-secondary-secondary flex flex-row items-center pointer-none cursor-pointer uppercase mr-[20px]" for="design">
+                    <input 
+                      type="radio"
+                      class="w-[16px] h-[16px] cursor-pointer appearance-none rounded-full border border-secondary-secondary checked:border-secondary-secondary checked:bg-secondary-secondary transition-all"
+                      id="design"
+                      name="type"
+                      >
+                      &nbsp;
+                      Design
+                  </label>
+
+                  <label class="text-secondary-secondary flex flex-row items-center pointer-none cursor-pointer uppercase" for="desktop">
+                    <input 
+                      type="radio"
+                      class="w-[16px] h-[16px] cursor-pointer appearance-none rounded-full border border-secondary-secondary checked:border-secondary-secondary checked:bg-secondary-secondary transition-all"
+                      id="other"
+                      name="type"
+                      >
+                      &nbsp;
+                      {{ $t('application.types.other') }}
+                  </label>
                 </div>
               </div>
 
@@ -80,8 +128,8 @@ function sendApplication()
                   >
 
                 <label 
-                  class="text-secondary-secondary ml-[10px] flex items-center w-full text-[12px]" 
-                  for="confirm">{{ $t("application.confirmation") }} &nbsp; <p class="underline">{{ $t("application.personaldata") }}</p></label>
+                  class="text-secondary-secondary my-[5px] ml-[10px] flex items-center w-full text-[16px]" 
+                  for="confirm">{{ $t("application.confirmation") }}&nbsp;<p class="underline">{{ $t("application.personaldata") }}</p></label>
               </div>
 
             </form>
