@@ -2,7 +2,8 @@
     "header": {
         "services": "Services",
         "portfolio": "Portfolio",
-        "aboutus": "About us"
+        "aboutus": "About us",
+        "do": "What we do"
     },
 
     "pages": {

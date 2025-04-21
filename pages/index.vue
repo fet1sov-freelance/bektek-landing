@@ -35,6 +35,13 @@ function sendApplication()
         </div>
       </li>
 
+      <li class="w-full flex justify-center h-full bg-secondary-primary">
+        <div class="w-full my-[90px] max-w-[1200px] flex justify-between">
+          <h2 class="text-[42px] text-primary-primary font-bold">{{ $t("header.do") }}</h2>
+
+        </div>
+      </li>
+
       <li class="w-full flex justify-center h-full bg-secondary-light">
         <div class="w-full my-[90px] max-w-[1200px] flex justify-between">
           <div class="w-full max-w-[570px]">
@@ -144,7 +151,7 @@ function sendApplication()
               </div>
 
               <input 
-              class="w-full py-[15px] border-accent-primary border-2 text-primary-primary text-[600] transition-all "
+              class="w-full py-[15px] border-accent-primary border-2 text-primary-primary text-[600] transition-all hover:bg-accent-primary"
               type="submit" 
               :value="$t('buttons.send')">
 

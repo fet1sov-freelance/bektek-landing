@@ -2,7 +2,8 @@
     "header": {
         "services": "Услуги",
         "portfolio": "Портфолио",
-        "aboutus": "О нас"
+        "aboutus": "О нас",
+        "do": "Что мы делаем"
     },
 
     "pages": {
