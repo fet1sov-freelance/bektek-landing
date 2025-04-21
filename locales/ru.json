@@ -16,6 +16,12 @@
         "send": "Отправить"
     },
 
+    "projects": {
+        "web": "Web-проектов",
+        "desktop": "Dekstop-проектов",
+        "rebranding": "Ребрендингов"
+    },
+
     "application": {
         "title": "Есть идеи?",
         "subtitle": "Поделитесь с нами!",

@@ -16,6 +16,12 @@
         "send": "Send a application"
     },
 
+    "projects": {
+        "web": "Web-projects",
+        "desktop": "Dekstop-projects",
+        "rebranding": "Rebranding"
+    },
+
     "application": {
         "title": "Have any ideas?",
         "subtitle": "Share with us!",

@@ -37,7 +37,34 @@ function sendApplication()
 
       <li class="w-full flex justify-center h-full bg-secondary-light">
         <div class="w-full my-[90px] max-w-[1200px] flex justify-between">
+          <div class="w-full max-w-[570px]">
+            <ul class="w-full h-full flex flex-col justify-between">
+              <li class="flex flex-col">
+                <p class="text-primary-primary text-[64px]">20</p>
+                <p class="text-primary-gray text-[14px]">{{ $t("projects.web") }}</p>
+              </li>
 
+              <li class="flex flex-col">
+                <p class="text-primary-primary text-[64px]">10</p>
+                <p class="text-primary-gray text-[14px]">{{ $t("projects.desktop") }}</p>
+              </li>
+
+              <li class="flex flex-col">
+                <p class="text-primary-primary text-[64px]">15</p>
+                <p class="text-primary-gray text-[14px]">{{ $t("projects.rebranding") }}</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="w-full max-w-[570px] flex flex-col justify-between">
+            <h2 class="text-[40px] text-primary-primary font-bold">
+              BekTek — молодой и перспективный коллектив, цель которого не только в создании продуктов, но и в улучшении качества бизнеса.
+            </h2>
+
+            <p class="text-primary-primary">
+              Мы создаем проекты с высоким уровнем визуального дизайна и надежной архитектурой, действуя быстро, уверенно и эффективно, уделяя особое внимание простоте, удобству и высокой конверсии
+            </p>
+          </div>
         </div>
       </li>
 
