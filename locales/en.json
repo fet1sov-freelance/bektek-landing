@@ -6,6 +6,17 @@
         "do": "What we do"
     },
 
+    "description": {
+        "title": "BekTek — a young and promising team, whose goal is not only to create products, but also to improve the quality of the business.",
+        "subtitle": "We create projects with a high level of visual design and reliable architecture, acting quickly, confidently and efficiently, paying special attention to simplicity, convenience and high conversion"
+    },
+
+    "sections": {
+        "do": {
+            "message": "Design, development, and launch of business products"
+        }
+    },
+
     "pages": {
         "landing": {
             "aboutus": "We combine cutting-edge design and reliable technology to create products that help your business."
@@ -14,7 +25,8 @@
 
     "buttons": {
         "leaveblank": "Leave a blank",
-        "send": "Send a application"
+        "send": "Send a application",
+        "contact": "Contact"
     },
 
     "projects": {

@@ -4,6 +4,9 @@ import { SocialLinkItems } from '~/content/sociallinks/SocialLinks';
 
 import WebStudioLogo from '~/assets/web-studio.svg';
 
+import SmallArrowLeft from '~/assets/small-ar-left.svg';
+import SmallArrowRight from '~/assets/small-ar-right.svg';
+
 import RouterButton from '~/components/button/RouterButton.vue';
 import SocialLinks from '~/components/sociallnks/SocialLinks.vue';
 
@@ -36,9 +39,28 @@ function sendApplication()
       </li>
 
       <li class="w-full flex justify-center h-full bg-secondary-primary">
-        <div class="w-full my-[90px] max-w-[1200px] flex justify-between">
+        <div class="w-full my-[90px] max-w-[1200px] flex flex-col justify-between">
           <h2 class="text-[42px] text-primary-primary font-bold">{{ $t("header.do") }}</h2>
 
+          <div class="flex flex-col">
+            <div class="w-full flex flex-col justify-between max-w-[240px]">
+              <button 
+              class="w-full py-[15px] border-accent-primary border-2 text-primary-primary text-[600] transition-all hover:bg-accent-primary"
+              type="submit">{{ $t('buttons.contact') }}</button>
+
+              <p class="text-[600] text-primary-primary">{{ $t("sections.do.message") }}</p>
+
+              <div class="flex flex-row mt-[10px]">
+                <button class="flex flex-col justify-center border-primary-gray border-[1px] p-[5px] py-[12px] mr-[10px]">
+                  <SmallArrowLeft/>
+                </button>
+
+                <button class="flex flex-col justify-center border-primary-gray border-[1px] p-[5px] py-[12px]">
+                  <SmallArrowRight/>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </li>
 
@@ -65,11 +87,11 @@ function sendApplication()
 
           <div class="w-full max-w-[570px] flex flex-col justify-between">
             <h2 class="text-[40px] text-primary-primary font-bold">
-              BekTek — молодой и перспективный коллектив, цель которого не только в создании продуктов, но и в улучшении качества бизнеса.
+              {{ $t("description.title") }}
             </h2>
 
             <p class="text-primary-primary">
-              Мы создаем проекты с высоким уровнем визуального дизайна и надежной архитектурой, действуя быстро, уверенно и эффективно, уделяя особое внимание простоте, удобству и высокой конверсии
+              {{ $t("description.subtitle") }}
             </p>
           </div>
         </div>
