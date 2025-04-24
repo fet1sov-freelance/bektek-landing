@@ -1,13 +1,14 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  label: string
+  label: string,
+  to: string
 }>();
 </script>
 
 <template>
-  <RouterLink 
+  <a 
     class="bg-accent-primary text-primary-primary font-semibold py-[15px] px-[50px]" 
-    to="#">
+    :href="props.to">
     {{ props.label }}
-  </RouterLink>
+  </a>
 </template>

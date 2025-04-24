@@ -5,7 +5,13 @@ useHead({
   title: SeoDataConstants.title,
   meta: [
     { name: 'description', content: SeoDataConstants.description }
-  ]
+  ],
+  htmlAttrs: {
+    class: 'scroll-smooth',
+  },
+  bodyAttrs: {
+    class: 'overflow-x-hidden'
+  }
 })
 </script>
 

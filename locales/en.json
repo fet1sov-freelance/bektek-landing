@@ -3,9 +3,14 @@
         "services": "Services",
         "portfolio": "Portfolio",
         "aboutus": "About us",
-        "do": "What we do"
+        "do": "What we do",
+        "works": "Our works"
     },
 
+    "preposition": {
+        "from": "From"
+    },
+    
     "description": {
         "title": "BekTek — a young and promising team, whose goal is not only to create products, but also to improve the quality of the business.",
         "subtitle": "We create projects with a high level of visual design and reliable architecture, acting quickly, confidently and efficiently, paying special attention to simplicity, convenience and high conversion"
@@ -30,9 +35,26 @@
     },
 
     "projects": {
-        "web": "Web-projects",
-        "desktop": "Dekstop-projects",
-        "rebranding": "Rebranding"
+        "web": {
+            "title": "Web-projects",
+            "projects": "Web-projects",
+            "subtitle": "Turnkey: creating from scratch or upgrading existing solutions to increase conversion and sales growth."
+        },
+        "desktop": {
+            "title": "Dekstop-projects",
+            "subtitle": "Developing applications for Windows/Linux, finding and correcting errors in existing solutions."
+        },
+        "backend": {
+            "title": "Backend",
+            "subtitle": "Turnkey: creating from scratch or upgrading existing solutions to increase conversion and sales growth."
+        },
+        "design": {
+            "title": "Design",
+            "subtitle": "Development of identity, brands, banners, flyers, business cards, presentations, illustrations and other design products"
+        },
+        "rebranding": {
+            "title": "Rebrandings"
+        }
     },
 
     "application": {
