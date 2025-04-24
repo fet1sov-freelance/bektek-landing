@@ -4,14 +4,16 @@ const props = defineProps<ItemList>();
 </script>
 
 <template>
-  <li>
-      <img
-      :src="props.imgSource"
-      class="w-[570px] h-[570px] object-contain">
+  <li class="w-[570px]">
+      <div class="w-full">
+        <img
+          :src="props.imgSource"
+          class="h-[570px] object-contain">
+      </div>
 
-      <div class="flex flex-row">
-        <p>{{ props.name }}</p>
-        <p>{{ props.category }}</p>
+      <div class="flex flex-row text-primary-primary justify-between mt-[10px]">
+        <p>{{ props.index ? props.index + "." : ""}} {{ props.name }}</p>
+        <p class="mr-[10px] text-primary-gray">{{ props.category }}</p>
       </div>
   </li>
 </template>

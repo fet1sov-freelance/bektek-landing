@@ -15,6 +15,7 @@ import EmployeeList from '~/components/employeecarousel/EmployeeList.vue';
 import { EmployeesData } from '~/content/employeeitems/EmployeeItems';
 
 import ItemsList from '~/components/itemslist/ItemsList.vue';
+import { ItemsListItems } from '~/content/itemslist/ItemsListItems';
 
 function sendApplication()
 {
@@ -73,7 +74,9 @@ function sendApplication()
         <div class="w-full my-[90px] max-w-[1200px] flex flex-col justify-between">
           <h2 class="text-[42px] text-primary-primary font-bold">{{ $t("header.works") }}</h2>
 
-          <ItemsList />
+          <ItemsList
+            :items="ItemsListItems"
+            />
         </div>
       </li>
 

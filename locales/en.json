@@ -54,6 +54,11 @@
         },
         "rebranding": {
             "title": "Rebrandings"
+        },
+
+        "categories": {
+            "ecommerce": "E-commerce",
+            "landing": "Landing"
         }
     },
 
@@ -72,7 +77,7 @@
         "confirmation": "I'm agree with ",
         "personaldata": "Personal data proceeding"
     },
-    
+
     "footer": {
         "message": "Design, development, and launch of business products"
     }

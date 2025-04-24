@@ -54,6 +54,11 @@
         },
         "rebranding": {
             "title": "Ребрендинги"
+        },
+
+        "categories": {
+            "ecommerce": "Интернет-магазин",
+            "landing": "Лендинг"
         }
     },
 

@@ -8,10 +8,11 @@ const props = defineProps<{
 </script>
 
 <template>
-  <ul class="">
+  <ul class="grid ">
     <ListItem 
-      v-for="item in props.items"
+      v-for="(item, index) in props.items"
       :img-source="item.imgSource"
+      :index="index + 1"
       :name="item.name"
       :category="item.category"
       />
