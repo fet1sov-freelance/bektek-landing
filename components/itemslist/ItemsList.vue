@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <ul class="grid ">
+  <ul class="flex flex-col justify-center xl:grid grid-cols-1 xl:grid-cols-2 gap-4 [&:nth-child(2)]:my-[10px] items-center">
     <ListItem 
       v-for="(item, index) in props.items"
       :img-source="item.imgSource"

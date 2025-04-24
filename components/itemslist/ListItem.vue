@@ -4,11 +4,11 @@ const props = defineProps<ItemList>();
 </script>
 
 <template>
-  <li class="w-[570px]">
+  <li class="w-[300px] xl:w-[570px]">
       <div class="w-full">
         <img
           :src="props.imgSource"
-          class="h-[570px] object-contain">
+          class="h-[300px] xl:h-[570px] object-contain">
       </div>
 
       <div class="flex flex-row text-primary-primary justify-between mt-[10px]">
