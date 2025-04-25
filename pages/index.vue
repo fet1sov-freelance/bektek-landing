@@ -3,6 +3,7 @@ import { HeaderItems } from '~/content/header/HeaderItems';
 import { SocialLinkItems } from '~/content/sociallinks/SocialLinks';
 
 import WebStudioLogo from '~/assets/web-studio.svg';
+import WebStudioLogoMobile from '~/assets/web-studio-mobile.svg';
 
 import RouterButton from '~/components/button/RouterButton.vue';
 import SocialLinks from '~/components/sociallnks/SocialLinks.vue';
@@ -31,15 +32,18 @@ function sendApplication()
       <li class="w-full h-[750px]">
         <div class="w-full flex justify-center h-full bg-cover bg-[url(/background.png)]">
           <div class="w-full max-w-[1200px]">
-            <WebStudioLogo />
+            <WebStudioLogo class="hidden lg:block"/>
+            <WebStudioLogoMobile class="block lg:hidden"/>
 
-            <p class="text-primary-primary mb-[30px] w-[50%] text-[16px] uppercase font-semibold">
+            <p class="text-primary-primary mb-[30px] w-full lg:w-[50%] text-[16px] uppercase font-semibold">
               {{ $t("pages.landing.aboutus") }}
             </p>
 
-            <div class="w-full flex flex-row justify-between items-end">
-              <RouterButton :label="$t('buttons.leaveblank')" to="#contact" />
-              <SocialLinks :items="SocialLinkItems" />
+            <SocialLinks class="block lg:hidden my-[30px]" :items="SocialLinkItems" />
+
+            <div class="w-full flex flex-col-reverse lg:flex-row justify-between items-end">
+              <RouterButton class="w-full text-center mx-[5px] lg:w-[unset]" :label="$t('buttons.leaveblank')" to="#contact" />
+              <SocialLinks class="hidden lg:flex" :items="SocialLinkItems" />
             </div>
           </div>
         </div>
@@ -82,7 +86,7 @@ function sendApplication()
 
       <li class="w-full flex justify-center h-full bg-secondary-light">
         <div class="w-full my-[90px] max-w-[1200px] flex justify-between">
-          <div class="w-full max-w-[570px]">
+          <div class="w-full max-w-[570px] hidden lg:flex">
             <ul class="w-full h-full flex flex-col justify-between">
               <li class="flex flex-col">
                 <p class="text-primary-primary text-[64px]">20</p>
@@ -102,7 +106,7 @@ function sendApplication()
           </div>
 
           <div class="w-full max-w-[570px] flex flex-col justify-between">
-            <h2 class="text-[40px] text-primary-primary font-bold">
+            <h2 class="text-[24px] lg:text-[40px] text-primary-primary mb-[10px] lg:font-bold">
               {{ $t("description.title") }}
             </h2>
 
@@ -128,7 +132,7 @@ function sendApplication()
       </li>
 
       <li class="w-full flex justify-center h-full bg-secondary-light">
-        <div class="w-full my-[90px] max-w-[1200px] flex justify-between">
+        <div class="w-full my-[90px] max-w-[1200px] flex justify-center xl:justify-between">
           <div>
             <a class="relative top-[-200px] invisible" name="contact"></a>
 
@@ -224,7 +228,7 @@ function sendApplication()
           </div>
 
           <div>
-            <img src="/photos/photo_1.png">
+            <img class="hidden xl:block" src="/photos/photo_1.png">
           </div>
         </div>
       </li>

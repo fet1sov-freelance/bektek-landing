@@ -26,18 +26,22 @@ if (import.meta.client)
 
 <template>
   <nav class="fixed flex flex-row justify-center w-full z-[99999] transition-all ease-in duration-300" :class="headerStyles">
-    <div class="flex flex-row items-center justify-between w-full max-w-[1200px] h-[135px]">
-      <div>
-        <RouterLink to="/">
-          <LogoIcon/>
-        </RouterLink>
-      </div>
+      <div class="flex flex-row items-center justify-between w-full max-w-[1200px] h-[135px]">
+        <div>
+          <RouterLink to="/">
+            <LogoIcon />
+          </RouterLink>
+        </div>
 
-      <ul class="flex flex-row">
-        <li class="mx-[15px] text-primary-primary" v-for="item in props.items">
-          <RouterLink :to="item.route">{{ item.label }}</RouterLink>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        <ul class="flex-row hidden lg:flex">
+          <li class="mx-[15px] text-primary-primary" v-for="item in props.items">
+            <RouterLink :to="item.route">{{ item.label }}</RouterLink>
+          </li>
+        </ul>
+
+        <div class="flex lg:hidden">
+          
+        </div>
+      </div>
+    </nav>
 </template>

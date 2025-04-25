@@ -11,7 +11,7 @@ const props = defineProps<ItemList>();
           class="h-[300px] xl:h-[570px] object-contain">
       </div>
 
-      <div class="flex flex-row text-primary-primary justify-between mt-[10px]">
+      <div class="flex flex-col xl:flex-row text-primary-primary justify-between mt-[10px]">
         <p>{{ props.index ? props.index + "." : ""}} {{ props.name }}</p>
         <p class="mr-[10px] text-primary-gray">{{ props.category }}</p>
       </div>
