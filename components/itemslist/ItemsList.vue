@@ -8,9 +8,10 @@ const props = defineProps<{
 </script>
 
 <template>
-  <ul class="flex flex-col justify-center xl:grid grid-cols-1 xl:grid-cols-2 gap-4 [&:nth-child(2)]:my-[10px] items-center">
+  <ul class="flex flex-col justify-center xl:flex-wrap xl:flex-row items-center">
     <ListItem 
       v-for="(item, index) in props.items"
+      class="p-[10px] odd:mt-[-60px] even:mt-[60px]"
       :img-source="item.imgSource"
       :index="index + 1"
       :name="item.name"

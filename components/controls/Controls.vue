@@ -6,13 +6,13 @@ import SmallArrowRight from '~/assets/small-ar-right.svg';
 <template>
   <div class="flex flex-row mt-[10px]">
     <button
-        @click="$emit('controlLeft')"
+        @click="$emit('control', 'left')"
         class="flex flex-col justify-center border-primary-gray border-[1px] p-[5px] py-[12px] mr-[10px]">
       <SmallArrowLeft />
     </button>
 
     <button 
-      @click="$emit('controlRight')"
+      @click="$emit('control', 'right')"
       class="flex flex-col justify-center border-primary-gray border-[1px] p-[5px] py-[12px]">
       <SmallArrowRight />
     </button>

@@ -19,9 +19,61 @@ import { EmployeesData } from '~/content/employeeitems/EmployeeItems';
 import ItemsList from '~/components/itemslist/ItemsList.vue';
 import { ItemsListItems } from '~/content/itemslist/ItemsListItems';
 
+defineEmits<{
+    control: [value: string]
+}>();
+
 function sendApplication()
 {
 
+}
+
+const serviceSlide : Ref<number> = ref(0);
+const renderServiceList = ref(true);
+async function handleServiceControls(control: string)
+{
+  if (control == "left")
+  {
+    if (serviceSlide.value)
+    {
+      serviceSlide.value--;
+    }
+    
+  } else {
+    if (serviceSlide.value + 1 <= ServiceItems.length - 1)
+    {
+      serviceSlide.value++;
+    }
+    
+  }
+  
+  renderServiceList.value = false;
+  await nextTick();
+  renderServiceList.value = true;
+}
+
+const employeeSlide : Ref<number> = ref(0);
+const renderEmployeeList = ref(true);
+async function handleTeamControls(control: string)
+{
+  if (control == "left")
+  {
+    if (employeeSlide.value)
+    {
+      employeeSlide.value--;
+    }
+    
+  } else {
+    if (employeeSlide.value + 1 <= EmployeesData.length - 1)
+    {
+      employeeSlide.value++;
+    }
+    
+  }
+  
+  renderEmployeeList.value = false;
+  await nextTick();
+  renderEmployeeList.value = true;
 }
 </script>
 
@@ -61,7 +113,7 @@ function sendApplication()
 
           <div class="flex w-full my-[20px] flex-row justify-between lg:justify-start">
             <h2 class="text-[24px] lg:text-[42px] text-primary-primary font-normal lg:font-bold">{{ $t("header.do") }}</h2>
-            <Controls class="flex lg:hidden"/>
+            <Controls @control="handleServiceControls" class="flex lg:hidden"/>
           </div>
           
 
@@ -73,12 +125,14 @@ function sendApplication()
 
               <div class="my-[20px] lg:my-[unset]">
                 <p class="text-[600] text-primary-primary">{{ $t("sections.do.message") }}</p>
-                <Controls class="hidden lg:flex"/>
+                <Controls @control="handleServiceControls" class="hidden lg:flex"/>
               </div>
             </div>
 
             <div class="w-full">
               <Services
+                v-if="renderServiceList"
+                :current-slide="serviceSlide"
                 :items="ServiceItems"/>
             </div>
           </div>
@@ -135,18 +189,20 @@ function sendApplication()
       <li class="w-full flex flex-col justify-center items-center h-full bg-secondary-primary">
         <div class="flex w-full my-[20px] flex-row justify-between lg:hidden px-[10px]">
           <p class="text-[24px] text-primary-primary">{{ $t("header.team") }}</p>
-          <Controls/>
+          <Controls @control="handleTeamControls"/>
         </div>
       
         <div class="w-full my-[20px] lg:my-[90px] max-w-[1200px] flex flex-col justify-between p-[10px] lg:p-[unset]">
           <div class="relative h-[420px]">
             <EmployeeList
+              v-if="renderEmployeeList"
+              :current-slide="employeeSlide"
               class="absolute"
               :items="EmployeesData"
               />
           </div>
           
-          <Controls class="hidden lg:flex"/>
+          <Controls @control="handleTeamControls" class="hidden lg:flex"/>
 
         </div>
       </li>

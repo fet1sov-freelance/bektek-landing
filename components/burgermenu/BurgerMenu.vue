@@ -31,7 +31,7 @@ function showMenu()
 
       <ul class="flex-col flex mt-[30px]">
         <li class="my-[10px] text-[20px] text-primary-primary" v-for="item in props.items">
-            <RouterLink :to="item.route" @click="showMenu()">{{ item.label }}</RouterLink>
+            <a :href="item.route" @click="showMenu()">{{ item.label }}</a>
         </li>
       </ul>
     </div>

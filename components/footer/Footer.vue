@@ -9,8 +9,8 @@ import SocialLinks from '~/components/sociallnks/SocialLinks.vue';
 <template>
   <div class="w-full flex justify-center h-full bg-secondary-primary">
     <div class="w-full my-[90px] max-w-[1200px] flex justify-between">
-      <div class="w-full flex flex-row justify-between items-center lg:items-start lg:flex-col">
-        <div>
+      <div class="w-full flex flex-row justify-between items-center lg:items-start lg:flex-col p-[10px] lg:p-[unset]">
+        <div class="flex flex-col justify-between h-full">
           <RouterLink to="/">
             <LogoIcon />
           </RouterLink>
@@ -22,7 +22,7 @@ import SocialLinks from '~/components/sociallnks/SocialLinks.vue';
           </div>
         </div>
 
-        <SocialLinks class="flex justify-between h-full flex-col lg:flex-row" :items="SocialLinkItems" />
+        <SocialLinks class="flex w-full lg:w-[unset]  justify-between h-full flex-col lg:flex-row" :items="SocialLinkItems" />
       </div>
 
       <div class="max-w-[570px] flex flex-col justify-between hidden lg:flex">
