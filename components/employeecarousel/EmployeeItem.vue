@@ -5,7 +5,7 @@ const props = defineProps<EmployeeData>();
 </script>
 
 <template>
-  <li class="w-[300px]">
+  <li class="min-w-full lg:min-w-[unset] w-[300px]">
     <img 
     :src="props.photoSrc"
     class="w-full h-[330px] object-cover">

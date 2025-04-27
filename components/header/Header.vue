@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import BurgerMenu from '~/components/burgermenu/BurgerMenu.vue';
+
 import type { HeaderItem } from '~/types/header/HeaderItem';
 import LogoIcon from '~/assets/logo.svg';
 
@@ -26,10 +28,10 @@ if (import.meta.client)
 
 <template>
   <nav class="fixed flex flex-row justify-center w-full z-[99999] transition-all ease-in duration-300" :class="headerStyles">
-      <div class="flex flex-row items-center justify-between w-full max-w-[1200px] h-[135px]">
+      <div class="flex flex-row items-center justify-between w-full max-w-[1200px] h-[80px] lg:h-[135px] px-[10px] lg:px-[0]">
         <div>
           <RouterLink to="/">
-            <LogoIcon />
+            <LogoIcon class="w-[100px] lg:w-[unset]"/>
           </RouterLink>
         </div>
 
@@ -40,7 +42,9 @@ if (import.meta.client)
         </ul>
 
         <div class="flex lg:hidden">
-          
+          <BurgerMenu 
+          :items="props.items"
+          />
         </div>
       </div>
     </nav>

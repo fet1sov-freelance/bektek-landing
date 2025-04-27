@@ -4,7 +4,8 @@
         "portfolio": "Portfolio",
         "aboutus": "About us",
         "do": "What we do",
-        "works": "Our works"
+        "works": "Our works",
+        "team": "Our team"
     },
 
     "preposition": {
@@ -75,7 +76,8 @@
             "other": "Another"
         },
         "confirmation": "I'm agree with ",
-        "personaldata": "Personal data proceeding"
+        "personaldata": "Personal data proceeding",
+        "confirmmessage": "By submitting the form, you agree to the processing of your Personal Data."
     },
 
     "footer": {

@@ -10,13 +10,14 @@ useHead({
     class: 'scroll-smooth',
   },
   bodyAttrs: {
-    class: 'overflow-x-hidden'
+    class: 'overflow-x-hidden',
+    style: "overflow-x: hidden"
   }
 })
 </script>
 
 <template>
-  <main class="w-full h-full">
+  <main class="w-full h-full overflow-x-hidden">
       <NuxtPage/>
   </main>
 </template>
