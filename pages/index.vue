@@ -54,32 +54,40 @@ function sendApplication()
         </div>
       </li>
 
-      <li class="w-full flex justify-center h-full bg-secondary-primary">
-        <div class="w-full my-[90px] max-w-[1200px] flex flex-col justify-between">
-          <h2 class="text-[42px] text-primary-primary font-bold">{{ $t("header.do") }}</h2>
+      <li class="w-full relative flex justify-center px-[10px] lg:px-[unset] h-full bg-secondary-primary">
+        <a class="absolute top-[-50px] invisible" name="services"></a>
 
-          <div class="flex flex-row w-full">
-            <div class="w-full h-[420px] flex flex-col justify-between max-w-[240px]">
+        <div class="w-full my-[90px] max-w-[1200px] flex flex-col justify-between">
+
+          <div class="flex w-full my-[20px] flex-row justify-between lg:justify-start">
+            <h2 class="text-[24px] lg:text-[42px] text-primary-primary font-normal lg:font-bold">{{ $t("header.do") }}</h2>
+            <Controls class="flex lg:hidden"/>
+          </div>
+          
+
+          <div class="flex flex-col-reverse lg:flex-row w-full">
+            <div class="w-full lg:h-[420px] flex flex-col-reverse lg:flex-col justify-between lg:mr-[25px] lg:min-w-[240px]">
               <a
                 class="w-full py-[15px] text-center border-accent-primary border-2 text-primary-primary text-[600] transition-all hover:bg-accent-primary"
                 href="#contact">{{ $t('buttons.contact') }}</a>
 
-              <div>
+              <div class="my-[20px] lg:my-[unset]">
                 <p class="text-[600] text-primary-primary">{{ $t("sections.do.message") }}</p>
-                <Controls/>
+                <Controls class="hidden lg:flex"/>
               </div>
             </div>
 
-            <div class="w-full relative">
+            <div class="w-full">
               <Services
-                class="absolute"
                 :items="ServiceItems"/>
             </div>
           </div>
         </div>
       </li>
 
-      <li class="w-full flex justify-center h-full bg-secondary-primary">
+      <li class="w-full flex relative justify-center h-full bg-secondary-primary">
+        <a class="absolute top-[-100px] invisible" name="works"></a>
+
         <div class="w-full my-[90px] max-w-[1200px] flex flex-col justify-between">
           <h2 class="text-[24px] lg:text-[42px] text-primary-primary font-normal lg:font-bold">{{ $t("header.works") }}</h2>
 
@@ -89,7 +97,9 @@ function sendApplication()
         </div>
       </li>
 
-      <li class="w-full flex justify-center h-full bg-secondary-light">
+      <li class="w-full relative flex justify-center h-full bg-secondary-light">
+        <a class="absolute top-[-100px] invisible" name="aboutus"></a>
+
         <div class="w-full my-[90px] max-w-[1200px] flex justify-center lg:justify-between">
           <div class="w-full max-w-[570px] hidden lg:flex">
             <ul class="w-full h-full flex flex-col justify-between">
@@ -122,8 +132,8 @@ function sendApplication()
         </div>
       </li>
 
-      <li class="w-full flex flex-col justify-center h-full bg-secondary-primary">
-        <div class="flex my-[20px] flex-row justify-between items-center lg:hidden px-[10px]">
+      <li class="w-full flex flex-col justify-center items-center h-full bg-secondary-primary">
+        <div class="flex w-full my-[20px] flex-row justify-between lg:hidden px-[10px]">
           <p class="text-[24px] text-primary-primary">{{ $t("header.team") }}</p>
           <Controls/>
         </div>
@@ -136,7 +146,7 @@ function sendApplication()
               />
           </div>
           
-          <Controls class="hidden lg:block"/>
+          <Controls class="hidden lg:flex"/>
 
         </div>
       </li>

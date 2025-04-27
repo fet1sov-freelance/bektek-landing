@@ -4,7 +4,7 @@ const props = defineProps<ServiceIt>();
 </script>
 
 <template>
-  <li class="bg-primary-primary w-[300px] min-w-[300px] min-h-[400px] h-[400px]">
+  <li class="bg-primary-primary w-full min-w-full lg:w-[300px] lg:min-w-[300px] min-h-[400px] h-[400px]">
     <img 
     class="w-full h-[220px] object-cover"
     :src="props.imgSource">

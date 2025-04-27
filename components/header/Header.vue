@@ -37,7 +37,7 @@ if (import.meta.client)
 
         <ul class="flex-row hidden lg:flex">
           <li class="mx-[15px] text-primary-primary" v-for="item in props.items">
-            <RouterLink :to="item.route">{{ item.label }}</RouterLink>
+            <a :href="item.route">{{ item.label }}</a>
           </li>
         </ul>
 

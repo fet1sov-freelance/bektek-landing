@@ -6,16 +6,16 @@ const { t } = i18n.global;
 export const HeaderItems: Array<HeaderItem> = [
     {
         label: t("header.services"),
-        route: "#"
+        route: "#services"
     } as HeaderItem,
 
     {
         label: t("header.portfolio"),
-        route: "#"
+        route: "#works"
     } as HeaderItem,
 
     {
         label: t("header.aboutus"),
-        route: "#"
+        route: "#aboutus"
     } as HeaderItem
 ];
