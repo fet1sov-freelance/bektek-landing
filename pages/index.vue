@@ -75,7 +75,40 @@ async function handleTeamControls(control: string)
   await nextTick();
   renderEmployeeList.value = true;
 }
+
+const servicelist = useTemplateRef("serviceList");
+function handleServiceControlsDesktop(control: string)
+{
+  if (control == "left")
+  {
+    servicelist.value?.scrollBy(1000, 0);
+  } else {
+    servicelist.value?.scrollBy(-1000, 0);
+  }
+}
+
+const employeeList = useTemplateRef("employeelist");
+function handleTeamControlsDesktop(control: string)
+{
+  if (control == "left")
+  {
+    employeeList.value?.scrollBy(1000, 0);
+  } else {
+    employeeList.value?.scrollBy(-1000, 0);
+  }
+}
 </script>
+
+<style scoped>
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+</style>
 
 <template>
   <div>
@@ -118,20 +151,22 @@ async function handleTeamControls(control: string)
           
 
           <div class="flex flex-col-reverse lg:flex-row w-full">
-            <div class="w-full lg:h-[420px] flex flex-col-reverse lg:flex-col justify-between lg:mr-[25px] lg:min-w-[240px]">
+            <div class="w-[240px] lg:h-[420px] flex flex-col-reverse lg:flex-col justify-between lg:mr-[25px] lg:min-w-[240px]">
               <a
                 class="w-full py-[15px] text-center border-accent-primary border-2 text-primary-primary text-[600] transition-all hover:bg-accent-primary"
                 href="#contact">{{ $t('buttons.contact') }}</a>
 
               <div class="my-[20px] lg:my-[unset]">
                 <p class="text-[600] text-primary-primary">{{ $t("sections.do.message") }}</p>
-                <Controls @control="handleServiceControls" class="hidden lg:flex"/>
+                <Controls @control="handleServiceControlsDesktop" class="hidden lg:flex"/>
               </div>
             </div>
 
-            <div class="w-full">
+            <div class="w-full overflow-hidden">
               <Services
+                ref="serviceList"
                 v-if="renderServiceList"
+                class="lg:overflow-x-scroll no-scrollbar"
                 :current-slide="serviceSlide"
                 :items="ServiceItems"/>
             </div>
@@ -195,6 +230,7 @@ async function handleTeamControls(control: string)
         <div class="w-full my-[20px] lg:my-[90px] max-w-[1200px] flex flex-col justify-between p-[10px] lg:p-[unset]">
           <div class="relative h-[420px]">
             <EmployeeList
+              ref="employeelist"
               v-if="renderEmployeeList"
               :current-slide="employeeSlide"
               class="absolute"
@@ -202,7 +238,7 @@ async function handleTeamControls(control: string)
               />
           </div>
           
-          <Controls @control="handleTeamControls" class="hidden lg:flex"/>
+          <Controls @control="handleTeamControlsDesktop" class="hidden lg:flex"/>
 
         </div>
       </li>

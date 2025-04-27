@@ -11,7 +11,7 @@ const props = defineProps<{
   <ul class="flex flex-col justify-center xl:flex-wrap xl:flex-row items-center">
     <ListItem 
       v-for="(item, index) in props.items"
-      class="p-[10px] odd:mt-[-60px] even:mt-[60px]"
+      class="p-[10px] odd:mt-[-80px] even:mt-[60px]"
       :img-source="item.imgSource"
       :index="index + 1"
       :name="item.name"
